@@ -2,6 +2,8 @@
 
 SWS application to provide relevant information (stocks) for companies world-wide.
 
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=victorkurauchi_sws-fullstack)
+
 ## Backend
 
 - NestJS
