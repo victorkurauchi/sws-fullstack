@@ -20,6 +20,7 @@ export class CompanyRepository extends Repository<Company> {
 
     try {
       const customQuery = this.applyCustomConditions(filterDto, queryBuilder);
+      customQuery.leftJoinAndSelect('company.score', 'score');
       customQuery.take(take ?? this.DEFAULT_TAKE);
       customQuery.skip(skip ?? this.DEFAULT_SKIP);
 
@@ -50,7 +51,6 @@ export class CompanyRepository extends Repository<Company> {
 
     if (score) {
       queryBuilder.leftJoin('company.score', 'swsCompanyScore.id', 'company.score');
-      queryBuilder.leftJoinAndSelect('company.score', 'score');
       queryBuilder.andWhere('(score.total = :score)', { score });
     }
 
