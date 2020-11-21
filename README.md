@@ -26,6 +26,18 @@ $ docker run -p 3000:4000 <image id>ab1667766129
 $ open http://localhost:3000/companies
 ```
 
+### Deploying to kubernetes
+
+#### Apply kube changes
+
+`cd backend`
+`kubectl apply -f .cicd/kube`
+`kubectl get pods`
+
+#### Get ingress public IP/Host
+
+`kubectl get ing --watch`
+
 <details><summary>Backend</summary>
 
 ### Technologies
