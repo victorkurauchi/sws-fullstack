@@ -12,10 +12,19 @@ There are integration tests on the backend to confirm that all required operatio
 
 For the next iterations:
 
-- [ ] dockerize frontend and backend
+- [x] dockerize backend
 - [ ] deploy backend with Kubernetes (Digital Ocean)
 - [x] deploy frontend with Vercel
 - [x] e2e frontend with Cypress
+
+### Setup docker backend (optional)
+
+```bash
+$ cd backend
+$ docker build . -f .cicd/docker/Dockerfile.node
+$ docker run -p 3000:4000 <image id>ab1667766129
+$ open http://localhost:3000/companies
+```
 
 <details><summary>Backend</summary>
 
