@@ -35,8 +35,6 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
 
   return (
     <Layout title="Details">
-      <h1>{selectedCompany && `${selectedCompany.name} (${selectedCompany.tickerSymbol})`}</h1>
-
       { isSearching && <Spin /> }
 
       <CompanyDetails data={selectedCompany} />
