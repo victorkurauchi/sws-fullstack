@@ -16,7 +16,6 @@ export function useCompaniesFacade(): [CompanyStateInterface, Function] {
   const [state, setState] = useState({ companies: [], active: null } as CompanyStateInterface);
 
   const searchCompanies = (value: string) => {
-    console.log('received', value);
     companyService.getCompanies(value);
   }
 
