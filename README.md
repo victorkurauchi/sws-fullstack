@@ -10,11 +10,13 @@ There are integration tests on the backend to confirm that all required operatio
 
 For the next iterations:
 
-- [] dockerize frontend and backend
-- [] deploy backend with Kubernetes (Digital Ocean)
-- [] deploy frontend with Vercel
+- [ ] dockerize frontend and backend
+- [ ] deploy backend with Kubernetes (Digital Ocean)
+- [ ] deploy frontend with Vercel
 
-<details><summary>## Backend</summary>
+<details><summary>Backend</summary>
+
+### Technologies
 
 - NestJS
 - Jest 
@@ -56,7 +58,9 @@ $ npm run test:cov
 
 </details>
 
-<details><summary>## Frontend</summary>
+<details><summary>Frontend</summary>
+
+### Technologies
 
 - NextJS
 - Jest 
