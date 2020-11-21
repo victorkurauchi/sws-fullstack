@@ -38,7 +38,10 @@ export class CompanyRepository extends Repository<Company> {
     const { search, symbol, score, includeShares } = filterDto;
 
     if (search) {
-      queryBuilder.andWhere('(company.name LIKE :search)', { search: `%${search}%` });
+      queryBuilder.andWhere(
+        '(company.name LIKE :search OR company.tickerSymbol LIKE :search OR company.securityName LIKE :search)',
+        { search: `%${search}%` }
+      );
     }
 
     if (symbol) {

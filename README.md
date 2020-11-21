@@ -4,7 +4,17 @@ SWS application to provide relevant information (stocks) for companies world-wid
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=victorkurauchi_sws-fullstack)
 
-## Backend
+*Note:*
+
+There are integration tests on the backend to confirm that all required operations work as expected.
+
+For the next iterations:
+
+- [] dockerize frontend and backend
+- [] deploy backend with Kubernetes (Digital Ocean)
+- [] deploy frontend with Vercel
+
+<details><summary>## Backend</summary>
 
 - NestJS
 - Jest 
@@ -44,6 +54,42 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## License
+</details>
 
-  Nest is [MIT licensed](LICENSE).
+<details><summary>## Frontend</summary>
+
+- NextJS
+- Jest 
+- Akita state management
+- RxJS
+- AntDesign
+- React hooks
+
+### Installation
+
+```bash
+$ cd sws-frontend
+$ yarn install
+```
+
+### Running the app
+
+```bash
+# development
+$ yarn dev
+
+# production mode
+$ npm run start:prod
+```
+
+### Test
+
+```bash
+# unit tests
+$ yarn test
+
+# test coverage
+$ yarn coverage
+```
+
+</details>
