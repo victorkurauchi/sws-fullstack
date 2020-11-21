@@ -40,6 +40,8 @@ describe('Companies spec', () => {
           force: true
         });
 
+        cy.wait(1000);
+
         cy.location().should((loc) => {
           expect(loc.pathname).to.eq('/companies/46B285BC-B25F-4814-985C-390A4BFA2023');
         });

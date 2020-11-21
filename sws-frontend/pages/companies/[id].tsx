@@ -1,4 +1,3 @@
-import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Spin, notification } from 'antd';
@@ -12,14 +11,16 @@ type Props = {
   errors?: string
 }
 
-const StaticPropsDetail = ({ errors }: Props) => {
+const CompanyDetailPage = ({ errors }: Props) => {
   const router = useRouter();
   const { id } = router.query;
   const [{ selectedCompany, isSearching, error }, getCompany] = useCompanyDetailsFacade();
 
   useEffect(() => {
-    getCompany(id);
-  }, []);
+    if (id) {
+      getCompany(id);
+    }
+  }, [id]);
 
   useEffect(() => {
     if (errors) {
@@ -40,26 +41,6 @@ const StaticPropsDetail = ({ errors }: Props) => {
       <CompanyDetails data={selectedCompany} />
     </Layout>
   );
-} 
-
-export default StaticPropsDetail;
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-
-  // const paths = [{
-  //   params: { id: user.id.toString() },
-  // }];
-
-  return { paths: [], fallback: true };
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  try {
-    const id = params?.id;
-    return { props: { id } };
-  } catch (err) {
-    return { props: { errors: err.message } }
-  }
-}
+export default CompanyDetailPage;

@@ -1,14 +1,12 @@
-import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { Spin, Input, Row, Col, Divider } from 'antd';
-import { sampleUserData } from '../../utils/sample-data';
 import Layout from '../../components/Layout';
 import { useCompaniesFacade } from '../../core/company/hooks/company.hook';
 import CompanyTable from '../../components/company/Table';
 
 const { Search } = Input;
 
-const WithStaticProps = () => {
+const CompaniesPage = () => {
   const [{ companies, isSearching }, searchCompanies] = useCompaniesFacade();
 
   return (
@@ -42,12 +40,4 @@ const WithStaticProps = () => {
   );
 } 
 
-export const getStaticProps: GetStaticProps = async () => {
-  // Example for including static props in a Next.js function component page.
-  // Don't forget to include the respective types for any props passed into
-  // the component.
-  const items = sampleUserData;
-  return { props: { items } }
-}
-
-export default WithStaticProps;
+export default CompaniesPage;
