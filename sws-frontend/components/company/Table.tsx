@@ -30,6 +30,15 @@ const columns = [
     sorter: (a: CompanyModel, b: CompanyModel) => a.name.localeCompare(b.name)
   },
   {
+    title: 'Overall score',
+    dataIndex: ['score', 'total'],
+    key: 'overallScore',
+    render: (text: string) => (
+      <strong>{text}</strong>
+    ),
+    sorter: (a: CompanyModel, b: CompanyModel) => a!.score!.total - b!.score!.total
+  },
+  {
     title: 'Exchange country',
     dataIndex: 'exchangeCountryIso',
     key: 'exchangeCountryIso',
