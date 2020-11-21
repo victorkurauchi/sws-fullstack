@@ -13,7 +13,7 @@ There are integration tests on the backend to confirm that all required operatio
 For the next iterations:
 
 - [x] dockerize backend
-- [ ] deploy backend with Kubernetes (Digital Ocean)
+- [X] deploy backend with Kubernetes (Digital Ocean)
 - [x] deploy frontend with Vercel
 - [x] e2e frontend with Cypress
 

@@ -1,6 +1,6 @@
 import { CompanyStore, companyStore } from './company.store';
 
-const BASE_URL = process.env.API_ENDPOINT || 'http://localhost:4000';
+const BASE_URL = process.env.NEXT_PUBLIC_API_ENDPOINT || 'http://localhost:4000';
 
 export class CompanyService {
   constructor(private store: CompanyStore) {}
