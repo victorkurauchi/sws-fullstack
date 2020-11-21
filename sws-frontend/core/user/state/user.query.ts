@@ -6,7 +6,7 @@ import { UsersState, userStore } from './user.store';
 
 export class UsersQuery extends QueryEntity<UsersState, User> {
   users$: Observable<User[]> = this.selectAll();
-  active$: Observable<User> = this.selectActive();
+  active$: Observable<any> = this.selectActive();
 }
 
 export const usersQuery = new UsersQuery(userStore);

@@ -7,7 +7,7 @@ import { useUsersFacade } from '../../core/user/hooks/users.hook';
 import List from '../../components/user/List';
 
 const WithStaticProps = () => {
-  const [{users, active}, selectUser, updateUser] = useUsersFacade();
+  const [{users}, selectUser] = useUsersFacade();
 
   return (
     <Layout title="Users List | Next.js + TypeScript Example">

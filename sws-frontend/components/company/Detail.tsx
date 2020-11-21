@@ -14,7 +14,7 @@ export default function CompanyDetails({ data }: Props) {
       return (
         <Descriptions title="Company Info">
           <Descriptions.Item label="Security name">{data.securityName}</Descriptions.Item>
-          <Descriptions.Item label="Score">{data.score.total}</Descriptions.Item>
+          <Descriptions.Item label="Score">{data?.score?.total}</Descriptions.Item>
           <Descriptions.Item label="Unique symbol">{data.uniqueSymbol}</Descriptions.Item>
           <Descriptions.Item label="Exchange country">{data.exchangeCountryIso}</Descriptions.Item>
           <Descriptions.Item label="Address">

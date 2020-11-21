@@ -67,7 +67,7 @@ const columns = [
   {
     title: 'Action',
     key: 'action',
-    render: (text: string, record: CompanyModel) => (
+    render: ({ record }: { record: CompanyModel}) => (
       <Space size="middle">
         <Link href={`/companies/${record.id}`}>
           <a>details</a>

@@ -1,11 +1,11 @@
 import { ID } from '@datorama/akita';
 import { of } from 'rxjs';
-import { UsersStore, userStore } from './user.store';
+import { UserStore, userStore } from './user.store';
 import { User } from './user.model';
 import data from './user.data';
 
 export class UsersService {
-  constructor(private usersStore: UsersStore) {}
+  constructor(private usersStore: UserStore) {}
 
   loadAll() {
     of(data).subscribe(entities => {

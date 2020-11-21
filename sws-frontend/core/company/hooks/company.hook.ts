@@ -3,7 +3,7 @@ import { Observable, Subscription } from 'rxjs';
 import { CompanyModel } from '../company.model';
 import { companyService } from '../company.service';
 import { companyQuery } from '../company.query';
-import { CompanyStateInterface } from '../company.state';
+import { CompanyStateInterface, COMPANY_INITIAL_STATE } from '../company.state';
 
 function onEmit<T>(source$:Observable<T>, nextFn:(value: T) => void): Subscription {
   return source$.subscribe(nextFn, console.error);
@@ -13,7 +13,7 @@ function onEmit<T>(source$:Observable<T>, nextFn:(value: T) => void): Subscripti
  * Custom Hook to manage a view Model for Companies view components
  */
 export function useCompaniesFacade(): [CompanyStateInterface, Function] {
-  const [state, setState] = useState({ companies: [], active: null } as CompanyStateInterface);
+  const [state, setState] = useState(COMPANY_INITIAL_STATE);
 
   const searchCompanies = (value: string) => {
     companyService.getCompanies(value);
@@ -38,7 +38,7 @@ export function useCompaniesFacade(): [CompanyStateInterface, Function] {
 }
 
 export function useCompanyDetailsFacade(): [CompanyStateInterface, Function] {
-  const [state, setState] = useState({ companies: [], active: null } as CompanyStateInterface);
+  const [state, setState] = useState(COMPANY_INITIAL_STATE);
 
   const getCompany = (uuid: string) => companyService.getCompany(uuid);
 

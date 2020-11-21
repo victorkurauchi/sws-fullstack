@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import { Button, DatePicker, version } from 'antd';
+import { version } from 'antd';
 
 
 const AboutPage = () => (

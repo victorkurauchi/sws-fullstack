@@ -1,13 +1,13 @@
-import { GetStaticProps, GetStaticPaths } from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next';
 
-import { User } from '../../interfaces'
-import { sampleUserData } from '../../utils/sample-data'
-import Layout from '../../components/Layout'
-import ListDetail from '../../components/ListDetail'
+import { User } from '../../interfaces';
+import { sampleUserData } from '../../utils/sample-data';
+import Layout from '../../components/Layout';
+import ListDetail from '../../components/ListDetail';
 
 type Props = {
-  item?: User
-  errors?: string
+  item?: User;
+  errors?: string;
 }
 
 const StaticPropsDetail = ({ item, errors }: Props) => {

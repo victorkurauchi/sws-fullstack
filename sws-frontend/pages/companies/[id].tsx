@@ -12,7 +12,7 @@ type Props = {
   errors?: string
 }
 
-const StaticPropsDetail = ({ item, errors }: Props) => {
+const StaticPropsDetail = ({ errors }: Props) => {
   const router = useRouter();
   const { id } = router.query;
   const [{ selectedCompany, isSearching, error }, getCompany] = useCompanyDetailsFacade();
