@@ -4,6 +4,8 @@ SWS application to provide relevant information (stocks) for companies world-wid
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=victorkurauchi_sws-fullstack)
 
+Backend will be running on http://localhost:4000 and frontend on http://localhost:3000
+
 *Note:*
 
 There are integration tests on the backend to confirm that all required operations work as expected.
