@@ -14,7 +14,8 @@ For the next iterations:
 
 - [ ] dockerize frontend and backend
 - [ ] deploy backend with Kubernetes (Digital Ocean)
-- [ ] deploy frontend with Vercel
+- [x] deploy frontend with Vercel
+- [x] e2e frontend with Cypress
 
 <details><summary>Backend</summary>
 
@@ -91,6 +92,9 @@ $ npm run start:prod
 ### Test
 
 ```bash
+# e2e tests
+$ yarn e2e
+
 # unit tests
 $ yarn test
 

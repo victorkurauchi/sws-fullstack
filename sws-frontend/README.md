@@ -24,6 +24,9 @@ $ npm run start:prod
 # unit tests
 $ yarn test
 
+# e2e tests
+$ yarn e2e
+
 # test coverage
 $ yarn coverage
 ```

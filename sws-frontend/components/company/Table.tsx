@@ -67,19 +67,19 @@ const columns = [
   {
     title: 'Action',
     key: 'action',
-    render: ({ record }: { record: CompanyModel}) => (
+    render: (record: CompanyModel) => (
       <Space size="middle">
-        <Link href={`/companies/${record.id}`}>
+        <Link href={`/companies/${record?.id}`}>
           <a>details</a>
         </Link>
         <a>remove</a>
       </Space>
-    ),
+    )
   },
 ];
 
 const CompanyTable = ({ data }: Props) => {
-  return <Table columns={columns} dataSource={data} rowKey={(record: CompanyModel) => record.id} />;
+  return <Table columns={columns} dataSource={data} rowKey={(record: CompanyModel) => record && record.id} />;
 }
 
 export default CompanyTable;

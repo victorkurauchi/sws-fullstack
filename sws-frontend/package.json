@@ -1,11 +1,17 @@
 {
   "name": "sws-frontend",
   "version": "1.0.0",
+  "description": "Next.js frontend to work with SWS backend to provide stocks information",
+  "author": "Victor Kurauchi <victorkurauchi@gmail.com>",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "e2e": "start-test dev 3000 cypress:run",
+    "pree2e": "rm -rf .nyc_output coverage .next || true",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@datorama/akita": "^5.2.5",
@@ -14,6 +20,7 @@
     "@zeit/next-sass": "^1.0.1",
     "antd": "^4.8.4",
     "babel-plugin-import": "^1.13.1",
+    "cypress": "^5.6.0",
     "date-fns": "^2.16.1",
     "faker": "^5.1.0",
     "less": "^3.12.2",
@@ -25,10 +32,18 @@
   "devDependencies": {
     "@babel/core": "^7.12.7",
     "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@cypress/code-coverage": "^3.8.4",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "check-code-coverage": "^1.10.0",
+    "start-server-and-test": "^1.11.6",
     "typescript": "4.0"
+  },
+  "nyc": {
+    "exclude": [
+      "pages/api/__coverage__.js"
+    ]
   },
   "license": "MIT"
 }
