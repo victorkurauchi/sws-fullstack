@@ -6,6 +6,10 @@ SWS application to provide relevant information (stocks) for companies world-wid
 
 Backend will be running on http://localhost:4000 and frontend on http://localhost:3000
 
+*Frontend deployment: https://sws-fullstack.vercel.app/*
+
+*Backend deployment: http://sws-backend.victorkurauchi.co/companies*
+
 *Note:*
 
 There are integration tests on the backend to confirm that all required operations work as expected.
@@ -13,9 +17,10 @@ There are integration tests on the backend to confirm that all required operatio
 For the next iterations:
 
 - [x] dockerize backend
-- [X] deploy backend with Kubernetes (Digital Ocean)
+- [x] deploy backend with Kubernetes (Digital Ocean)
 - [x] deploy frontend with Vercel
 - [x] e2e frontend with Cypress
+- [ ] configure https certificate in Kubernetes (Digital Ocean)
 
 ### Setup docker backend (optional)
 

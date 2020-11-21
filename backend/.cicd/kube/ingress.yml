@@ -9,8 +9,13 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging-sws-backend-stg"
     # nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
+  tls:
+    - hosts:
+      - sws-backend.victorkurauchi.co
+      secretName: sws-backend-tls
   rules:
     - host: sws-backend.victorkurauchi.co
       http:
