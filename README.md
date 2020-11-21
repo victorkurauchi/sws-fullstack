@@ -27,8 +27,8 @@ For the next iterations:
 ```bash
 $ cd backend
 $ docker build . -f .cicd/docker/Dockerfile.node
-$ docker run -p 3000:4000 <image id>ab1667766129
-$ open http://localhost:3000/companies
+$ docker run -p 4000:4000 <image id>
+$ open http://localhost:4000/companies
 ```
 
 ### Deploying to kubernetes
