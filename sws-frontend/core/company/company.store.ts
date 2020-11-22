@@ -7,9 +7,9 @@ if (process.env.NODE_ENV === 'production') {
 
 @StoreConfig({ name: 'CompaniesApp' })
 export class CompanyStore extends Store<CompanyStateInterface> {
-  constructor() {
-    super(COMPANY_INITIAL_STATE);
+  constructor(state: CompanyStateInterface) {
+    super(state);
   }
 }
 
-export const companyStore = new CompanyStore();
+export const companyStore = new CompanyStore(COMPANY_INITIAL_STATE);
